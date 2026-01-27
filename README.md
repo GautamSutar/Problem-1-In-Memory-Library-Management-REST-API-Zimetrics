@@ -157,8 +157,6 @@ This line creates an empty Python dictionary that will store all books in RAM (m
 - **Key**: Book ID (integer)
 - **Value**: Book object (dictionary with book details)
 
-
-
 ## ✅ Step 13: To Add the Book Data 
 
 Create an in-memory database using a Python dictionary to store books:
@@ -185,8 +183,6 @@ This line creates an empty Python dictionary that will store all books in RAM (m
 - **Key**: Book ID (integer)
 - **Value**: Book object (dictionary with book details)
 
-
-
 ## ✅ Step 14: Import HTTPException and Create Add Books Endpoint
 
 Import HTTPException for error handling and create the first API endpoint to add books:
@@ -205,7 +201,6 @@ class Book(BaseModel):
     author: str
     year: int
 ```
-
 
 ## ✅ Step 15: Book Creating Logic Done
 
@@ -233,8 +228,6 @@ def add_books(book: Book):
     return {"message": "Book added successfully."}
 ```
 
-
-
 ## ✅ Step 15: Run the Server to Test POST Function
 
 Run this command to start the FastAPI development server:
@@ -258,3 +251,4 @@ INFO:     Started server process
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 ```
+
