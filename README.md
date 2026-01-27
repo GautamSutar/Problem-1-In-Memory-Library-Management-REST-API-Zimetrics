@@ -159,7 +159,7 @@ This line creates an empty Python dictionary that will store all books in RAM (m
 
 
 
-## ✅ Step 12: To Add the Book Data 
+## ✅ Step 13: To Add the Book Data 
 
 Create an in-memory database using a Python dictionary to store books:
 
@@ -187,7 +187,7 @@ This line creates an empty Python dictionary that will store all books in RAM (m
 
 
 
-## ✅ Step 13: Import HTTPException and Create Add Books Endpoint
+## ✅ Step 14: Import HTTPException and Create Add Books Endpoint
 
 Import HTTPException for error handling and create the first API endpoint to add books:
 
@@ -207,7 +207,7 @@ class Book(BaseModel):
 ```
 
 
-## ✅ Step 14: Book Creating Logic Done
+## ✅ Step 15: Book Creating Logic Done
 
 Complete the add books endpoint with full functionality:
 
@@ -233,3 +233,28 @@ def add_books(book: Book):
     return {"message": "Book added successfully."}
 ```
 
+
+
+## ✅ Step 15: Run the Server to Test POST Function
+
+Run this command to start the FastAPI development server:
+
+```bash
+uvicorn main:app --reload
+```
+
+**What does this command do?**
+
+- `uvicorn`: ASGI server that runs FastAPI applications
+- `main`: The name of your Python file (main.py)
+- `app`: The FastAPI instance variable name in your code
+- `--reload`: Automatically restarts the server when code changes are detected (useful for development)
+
+**Expected Output:**
+```
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process
+INFO:     Started server process
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+```
