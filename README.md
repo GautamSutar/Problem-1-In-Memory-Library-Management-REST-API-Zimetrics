@@ -87,17 +87,20 @@ Problem-1-In-Memory-Library-Management-REST-API-Zimetrics/
 
 ## ✅ Step 9: Import FastAPI
 
-```
+Import the FastAPI framework into your main.py file:
+
+```python
 from fastapi import FastAPI
 ```
 
-## ✅ Step 10: Import FastAPI
+## ✅ Step 10: Initialize FastAPI Application
 
-Create the `main.py` file inside the project directory:
+Create the FastAPI application instance in your `main.py` file:
 
-```
+```python
 from fastapi import FastAPI
 
 app = FastAPI()
 ```
 
+This creates the main FastAPI application object that will handle all your API routes and requests.
