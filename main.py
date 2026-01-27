@@ -9,6 +9,12 @@ class Book(BaseModel):
     author: str
     year: int
 
+
+# Home Route
+@app.get("/")
+def home():
+    return {"message": "In-Memory Library API Running"}
+
 @app.post("/add-books")
 def add_books(book: Book):
     if book.id in book_db:
