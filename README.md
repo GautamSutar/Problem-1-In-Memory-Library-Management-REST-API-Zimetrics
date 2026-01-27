@@ -252,3 +252,50 @@ INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 ```
 
+this is the postman image of the data creation response coming on post request 
+image path 
+
+## ✅ Step 16: Testing POST Request in Postman
+
+This screenshot shows a successful POST request to add a book using Postman.
+
+![Postman POST Request Screenshot](./screenshots/postman_post_request.png)
+
+**Request Details:**
+- **Method**: POST
+- **URL**: `http://127.0.0.1:8000/add-books`
+- **Content-Type**: JSON (raw)
+
+**Request Body:**
+```json
+{
+    "id": 1,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+}
+```
+
+**Response:**
+- **Status Code**: 200 OK
+- **Response Time**: 26 ms
+- **Response Body**:
+```json
+{
+    "message": "Book added successfully."
+}
+```
+
+**What this confirms:**
+- The API is running correctly on `http://127.0.0.1:8000`
+- The `/add-books` endpoint is working properly
+- Book data is being validated and stored in the in-memory database
+- Success message is returned as expected
+
+**Note:** 
+To display the image, create a `screenshots` folder in your project directory and save your Postman screenshot as `postman_post_request.png` in that folder.
+
+Alternatively, you can use the direct path:
+```markdown
+![Postman POST Request](path/to/your/Screenshot_2026-01-28_001137.png)
+```
