@@ -104,3 +104,29 @@ app = FastAPI()
 ```
 
 This creates the main FastAPI application object that will handle all your API routes and requests.
+
+
+## ✅ Step 11: Create the Model Class
+
+Create the Book model class using Pydantic's BaseModel for data validation:
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class Book(BaseModel):
+    id: int
+    title: str
+    author: str
+    year: int
+```
+
+This Book model defines the structure of a book object with four fields:
+- `id`: Unique identifier for the book (integer)
+- `title`: Title of the book (string)
+- `author`: Author of the book (string)
+- `year`: Publication year (integer)
+
+Pydantic's BaseModel provides automatic data validation and serialization for your API.
