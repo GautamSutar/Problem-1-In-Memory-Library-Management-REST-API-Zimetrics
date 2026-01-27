@@ -87,17 +87,17 @@ Problem-1-In-Memory-Library-Management-REST-API-Zimetrics/
 
 ## ✅ Step 9: Import FastAPI
 
+```
+from fastapi import FastAPI
+```
+
+## ✅ Step 10: Import FastAPI
+
 Create the `main.py` file inside the project directory:
 
 ```
-1. Problem-1-In-Memory-Library-Management-REST-API-Zimetrics/
-   └── main.py
+from fastapi import FastAPI
+
+app = FastAPI()
 ```
 
-Directory Structure:
-```
-Problem-1-In-Memory-Library-Management-REST-API-Zimetrics/
-├── main.py
-├── requirements.txt
-└── README.md
-```
