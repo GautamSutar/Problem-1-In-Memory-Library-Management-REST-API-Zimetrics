@@ -20,3 +20,16 @@ source venv/Scripts/activate   (bash)
 ```
 pip install -r requirements.txt
 ```
+
+### Step 4: Upgrade pip (if needed)
+
+If you face this recommendation:
+```
+[notice] A new release of pip is available: 24.3.1 -> 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+```
+
+Run:
+```
+python.exe -m pip install --upgrade pip
+```
