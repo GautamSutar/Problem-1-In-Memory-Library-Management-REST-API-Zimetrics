@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 app = FastAPI()
 
@@ -8,3 +8,9 @@ class Book(BaseModel):
     title: str
     author: str
     year: int
+
+@app.post("/add-books"):
+def add_books(book: Book):
+    if book.id in book_db:
+        raise HTTPException(status_code=400, detail="Book with this ID already exists.")
+

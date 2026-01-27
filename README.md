@@ -159,4 +159,55 @@ This line creates an empty Python dictionary that will store all books in RAM (m
 
 
 
+## ✅ Step 12: To Add the Book Data 
+
+Create an in-memory database using a Python dictionary to store books:
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+book_db = {}
+
+class Book(BaseModel):
+    id: int
+    title: str
+    author: str
+    year: int
+```
+
+**What is `book_db = {}`?**
+
+This line creates an empty Python dictionary that will store all books in RAM (memory). 
+
+- **Key**: Book ID (integer)
+- **Value**: Book object (dictionary with book details)
+
+
+
+## ✅ Step 13: Import HTTPException and Create Add Books Endpoint
+
+Import HTTPException for error handling and create the first API endpoint to add books:
+
+```python
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+
+app = FastAPI()
+
+book_db = {}
+
+class Book(BaseModel):
+    id: int
+    title: str
+    author: str
+    year: int
+
+@app.post("/add-books")
+def add_books(book: Book):
+    if book.id in book_db:
+        raise HTTPException(status_code=400, detail="Book with this ID already exists.")
+```
 
