@@ -130,3 +130,33 @@ This Book model defines the structure of a book object with four fields:
 - `year`: Publication year (integer)
 
 Pydantic's BaseModel provides automatic data validation and serialization for your API.
+
+## ✅ Step 12: Create the In-Memory Storage
+
+Create an in-memory database using a Python dictionary to store books:
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+book_db = {}
+
+class Book(BaseModel):
+    id: int
+    title: str
+    author: str
+    year: int
+```
+
+**What is `book_db = {}`?**
+
+This line creates an empty Python dictionary that will store all books in RAM (memory). 
+
+- **Key**: Book ID (integer)
+- **Value**: Book object (dictionary with book details)
+
+
+
+
