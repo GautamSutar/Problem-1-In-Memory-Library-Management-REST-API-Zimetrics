@@ -101,6 +101,10 @@ Create the FastAPI application instance in your `main.py` file:
 from fastapi import FastAPI
 
 app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "In-Memory Library API Running"}
 ```
 
 This creates the main FastAPI application object that will handle all your API routes and requests.
@@ -121,6 +125,10 @@ class Book(BaseModel):
     title: str
     author: str
     year: int
+
+@app.get("/")
+def home():
+    return {"message": "In-Memory Library API Running"}
 ```
 
 This Book model defines the structure of a book object with four fields:
@@ -148,6 +156,10 @@ class Book(BaseModel):
     title: str
     author: str
     year: int
+
+@app.get("/")
+def home():
+    return {"message": "In-Memory Library API Running"}
 ```
 
 **What is `book_db = {}`?**
@@ -174,6 +186,10 @@ class Book(BaseModel):
     title: str
     author: str
     year: int
+
+@app.get("/")
+def home():
+    return {"message": "In-Memory Library API Running"}
 ```
 
 **What is `book_db = {}`?**
@@ -200,6 +216,10 @@ class Book(BaseModel):
     title: str
     author: str
     year: int
+
+@app.get("/")
+def home():
+    return {"message": "In-Memory Library API Running"}
 ```
 
 ## ✅ Step 15: Book Creating Logic Done
@@ -219,6 +239,10 @@ class Book(BaseModel):
     title: str
     author: str
     year: int
+
+@app.get("/")
+def home():
+    return {"message": "In-Memory Library API Running"}
 
 @app.post("/add-books")
 def add_books(book: Book):
@@ -262,6 +286,89 @@ This screenshot shows a successful POST request to add a book using Postman.
 ![Postman POST Request Screenshot](screenshots/post.png)
 
 **Request Details:**
+- **Method**: POST
+- **URL**: `http://127.0.0.1:8000/add-books`
+- **Content-Type**: JSON (raw)
+
+**Request Body:**
+```json
+{
+    "id": 1,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+}
+```
+
+**Response:**
+- **Status Code**: 200 OK
+- **Response Time**: 26 ms
+- **Response Body**:
+```json
+{
+    "message": "Book added successfully."
+}
+```
+
+## ✅ Step 17: Get All Books Request Logic
+
+Add the GET endpoint to retrieve all books from the database.
+
+![Postman POST Request Screenshot](screenshots/get_all_books.png)
+
+```python
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+
+app = FastAPI()
+
+book_db = {}
+
+class Book(BaseModel):
+    id: int
+    title: str
+    author: str
+    year: int
+
+@app.get("/")
+def home():
+    return {"message": "In-Memory Library API Running"}
+
+# Home Route
+@app.get("/")
+def home():
+    return {"message": "In-Memory Library API Running"}
+
+@app.post("/add-books")
+def add_books(book: Book):
+    if book.id in book_db:
+        raise HTTPException(status_code=400, detail="Book with this ID already exists.")
+    book_db[book.id] = book
+    return {"message": "Book added successfully."}
+
+
+@app.get("/books")
+def get_all_books():
+    return list(book_db.values())
+```
+
+**New Endpoint: GET /books**
+- **Method**: GET
+- **URL**: `http://127.0.0.1:8000/books`
+- **Purpose**: Retrieves all books stored in the in-memory database
+- **Response**: Returns a list of all book objects
+
+**How it works:**
+- `book_db.values()` gets all book objects from the dictionary
+- `list()` converts the dictionary values to a list format
+- Returns an empty list `[]` if no books exist
+- Returns all books in JSON array format if books exist
+
+---
+
+**Previous Endpoint Details:**
+
+**POST /add-books**
 - **Method**: POST
 - **URL**: `http://127.0.0.1:8000/add-books`
 - **Content-Type**: JSON (raw)

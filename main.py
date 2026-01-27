@@ -23,3 +23,7 @@ def add_books(book: Book):
     return {"message": "Book added successfully."}
 
 
+
+@app.get("/books")
+def get_all_books():
+    return list(book_db.values())
