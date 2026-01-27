@@ -22,8 +22,13 @@ def add_books(book: Book):
     book_db[book.id] = book
     return {"message": "Book added successfully."}
 
-
-
 @app.get("/books")
 def get_all_books():
     return list(book_db.values())
+
+
+@app.get("/book/{id}")
+def get_book_by_id(id: int):
+    if id not in book_db:
+        raise HTTPException(status_code=404, detail="Book not found.")
+    return book_db[id]
