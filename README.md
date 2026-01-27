@@ -33,3 +33,20 @@ Run:
 ```
 python.exe -m pip install --upgrade pip
 ```
+
+### Step 5: Create the main.py file
+
+Create the `main.py` file inside the project directory:
+
+```
+1. Problem-1-In-Memory-Library-Management-REST-API-Zimetrics/
+   └── main.py
+```
+
+Directory Structure:
+```
+Problem-1-In-Memory-Library-Management-REST-API-Zimetrics/
+├── main.py
+├── requirements.txt
+└── README.md
+```
