@@ -13,4 +13,7 @@ class Book(BaseModel):
 def add_books(book: Book):
     if book.id in book_db:
         raise HTTPException(status_code=400, detail="Book with this ID already exists.")
+    book_db[book.id] = book
+    return {"message": "Book added successfully."}
+
 
