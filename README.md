@@ -259,7 +259,7 @@ image path
 
 This screenshot shows a successful POST request to add a book using Postman.
 
-![Postman POST Request Screenshot](./screenshots/postman_post_request.png)
+![Postman POST Request Screenshot](screenshots/post.png)
 
 **Request Details:**
 - **Method**: POST
@@ -284,18 +284,4 @@ This screenshot shows a successful POST request to add a book using Postman.
 {
     "message": "Book added successfully."
 }
-```
-
-**What this confirms:**
-- The API is running correctly on `http://127.0.0.1:8000`
-- The `/add-books` endpoint is working properly
-- Book data is being validated and stored in the in-memory database
-- Success message is returned as expected
-
-**Note:** 
-To display the image, create a `screenshots` folder in your project directory and save your Postman screenshot as `postman_post_request.png` in that folder.
-
-Alternatively, you can use the direct path:
-```markdown
-![Postman POST Request](path/to/your/Screenshot_2026-01-28_001137.png)
 ```
