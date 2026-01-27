@@ -38,24 +38,24 @@ cd Problem-1-In-Memory-Library-Management-REST-API-Zimetrics
 ```
 
 
-### Step 4. Create requirements.txt file
+## ✅ Step 4. Create requirements.txt file
 fastapi
 uvicorn
 
-### Step 5. Create Virtual Environment (Optional but Recommended)
+## ✅ Step 5. Create Virtual Environment (Optional but Recommended)
 
 ```
 python -m venv venv
 venv\Scripts\activate   (Windows)
 source venv/Scripts/activate   (bash)
 ```
-### Step 6: Install Dependencies
+## ✅ Step 6: Install Dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-### Step 7: Upgrade pip (if needed)
+## ✅ Step 7: Upgrade pip (if needed)
 
 If you face this recommendation:
 ```
@@ -68,7 +68,7 @@ Run:
 python.exe -m pip install --upgrade pip
 ```
 
-### Step 8: Create the main.py file
+## ✅ Step 8: Create the main.py file
 
 Create the `main.py` file inside the project directory:
 
@@ -85,7 +85,7 @@ Problem-1-In-Memory-Library-Management-REST-API-Zimetrics/
 └── README.md
 ```
 
-### Step 9: Import FastAPI
+## ✅ Step 9: Import FastAPI
 
 Create the `main.py` file inside the project directory:
 
