@@ -4,10 +4,6 @@
 
 A REST API built with FastAPI that manages a library's book inventory using in-memory data storage.
 
-# Create requirements.txt file
-fastapi
-uvicorn
-
 # 2. Create requirements.txt file
 fastapi
 uvicorn
