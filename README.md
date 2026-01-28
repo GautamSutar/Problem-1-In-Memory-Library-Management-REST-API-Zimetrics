@@ -36,7 +36,7 @@ I used a Python dictionary as in-memory storage because it is fast and matches t
 ![Search Books](screenshots/get_book_search.png)
 
 ### GET – Book By ID
-![Get Book by ID](screenshots/delete-by-id.png)
+![Get Book by ID](screenshots/get_by_id.png)
 
 ### DELETE – Book By ID
 ![Delete Book](screenshots/delete-by-id.png)
