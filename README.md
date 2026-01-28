@@ -47,7 +47,23 @@ I used a Python dictionary as in-memory storage because it is fast and matches t
 ![Delete Book](screenshots/delete-by-id.png)
 
 ## Future Improvements
-* Add database support (PostgreSQL / SQLite)
-* Add input validation
-* Add authentication
-* Add unit tests
+
+- Integrate PostgreSQL / SQLite for persistent storage  
+
+- Use SQLAlchemy ORM for database abstraction  
+
+- Add JWT-based authentication and role-based authorization  
+
+- Implement pagination, sorting, and filtering for large datasets  
+
+- Add request validation and custom error handling  
+
+- Write unit and integration tests using Pytest  
+
+- Add Docker support for containerized deployment  
+
+- Implement logging and monitoring  
+
+- Add rate limiting and security headers  
+
+- Deploy on cloud (AWS / Render / Railway)
