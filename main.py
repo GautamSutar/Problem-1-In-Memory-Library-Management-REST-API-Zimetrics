@@ -27,8 +27,25 @@ def get_all_books():
     return list(book_db.values())
 
 
+@app.get("/books/search")
+def search_books(year: int):
+    results = []
+    for book in book_db.values():
+        if book.year == year:
+            results.append(book)
+    return results
+
+
 @app.get("/book/{id}")
 def get_book_by_id(id: int):
     if id not in book_db:
         raise HTTPException(status_code=404, detail="Book not found.")
     return book_db[id]
+
+
+@app.delete("/book/{id}")
+def delete_book(id: int):
+    if id not in book_db:
+        raise HTTPException(status_code=404, detail="Book not found.")
+    del book_db[id]
+    return {"message": "Book deleted successfully."}
