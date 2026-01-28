@@ -14,7 +14,12 @@ uvicorn main:app --reload
 
 Open in browser:
 ```
-http://127.0.0.1:8000/docs
+http://127.0.0.1:8000/
+
+You will get this response it means Server running correct 
+{
+    "message": "In-Memory Library API Running"
+}
 ```
 
 ## The Logic (How I Thought)
